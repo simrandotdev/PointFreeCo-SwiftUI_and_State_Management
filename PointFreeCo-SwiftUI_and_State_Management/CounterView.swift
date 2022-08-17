@@ -11,6 +11,8 @@ struct CounterView: View {
     
     @ObservedObject var state: AppState
     
+    @State var showModal = false
+    
     var body: some View {
         VStack(spacing: 12) {
             HStack {
@@ -19,10 +21,13 @@ struct CounterView: View {
                 Button("+", action: incrementCount)
             }
             
-            Button("Is this prime?") {}
+            Button("Is this prime?") {showModal.toggle()  }
             Button("What is the \(state.count) prime?") {}
         }
         .navigationTitle("Counter Demo")
+        .sheet(isPresented: $showModal) {
+            IsThisPrimeView(appState: state)
+        }
     }
     
     func incrementCount() {
@@ -41,18 +46,4 @@ struct CounterView_Previews: PreviewProvider {
     static var previews: some View {
         CounterView(state: AppState())
     }
-}
-
-
-import Combine
-
-class AppState: ObservableObject {
-    
-    @Published var count: Int = 0 {
-        didSet {
-            self.didChange.send()
-        }
-    }
-    
-    var didChange = PassthroughSubject<Void, Never>()
 }
