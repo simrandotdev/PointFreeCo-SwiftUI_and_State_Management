@@ -21,7 +21,7 @@ struct ContentView: View {
                 }
                 
                 NavigationLink {
-                    EmptyView()
+                    FavoritePrimesView(state: appstate)
                 } label: {
                     Text("Favorite Primes")
                 }

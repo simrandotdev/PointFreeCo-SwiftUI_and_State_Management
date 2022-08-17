@@ -16,7 +16,7 @@ class AppState: ObservableObject {
         }
     }
     
-    @Published var favoritePrimes: [Int] = [] {
+    @Published var favoritePrimes: [Int] = [2, 3, 5, 7, 11] {
         didSet { self.didChange.send() }
     }
     
