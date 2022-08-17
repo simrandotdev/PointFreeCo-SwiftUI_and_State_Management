@@ -8,9 +8,26 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @StateObject var appstate = AppState()
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                NavigationLink {
+                    CounterView(state: appstate)
+                } label: {
+                    Text("Counter Demo")
+                }
+                
+                NavigationLink {
+                    EmptyView()
+                } label: {
+                    Text("Favorite Primes")
+                }
+            }
+            .navigationTitle("State Management")
+        }
     }
 }
 
