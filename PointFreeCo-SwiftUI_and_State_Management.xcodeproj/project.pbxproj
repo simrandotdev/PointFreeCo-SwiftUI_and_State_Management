@@ -14,6 +14,7 @@
 		3DB865BF28AD431200736F0C /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB865BE28AD431200736F0C /* CounterView.swift */; };
 		3DB865C128AD50CA00736F0C /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB865C028AD50CA00736F0C /* AppState.swift */; };
 		3DB865C328AD50E700736F0C /* IsThisPrimeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DB865C228AD50E700736F0C /* IsThisPrimeView.swift */; };
+		3DCC7D6628AD7B04003C04E3 /* WolframAlphaResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DCC7D6528AD7B04003C04E3 /* WolframAlphaResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		3DB865BE28AD431200736F0C /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
 		3DB865C028AD50CA00736F0C /* AppState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppState.swift; sourceTree = "<group>"; };
 		3DB865C228AD50E700736F0C /* IsThisPrimeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IsThisPrimeView.swift; sourceTree = "<group>"; };
+		3DCC7D6528AD7B04003C04E3 /* WolframAlphaResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WolframAlphaResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				3DB865B628AD41EE00736F0C /* Preview Content */,
 				3DB865C028AD50CA00736F0C /* AppState.swift */,
 				3DB865C228AD50E700736F0C /* IsThisPrimeView.swift */,
+				3DCC7D6528AD7B04003C04E3 /* WolframAlphaResult.swift */,
 			);
 			path = "PointFreeCo-SwiftUI_and_State_Management";
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DCC7D6628AD7B04003C04E3 /* WolframAlphaResult.swift in Sources */,
 				3DB865B328AD41ED00736F0C /* ContentView.swift in Sources */,
 				3DB865B128AD41ED00736F0C /* PointFreeCo_SwiftUI_and_State_ManagementApp.swift in Sources */,
 				3DB865BF28AD431200736F0C /* CounterView.swift in Sources */,
