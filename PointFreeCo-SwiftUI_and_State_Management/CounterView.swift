@@ -12,9 +12,6 @@ struct CounterView: View {
     @ObservedObject var state: AppState
     
     @State var showModal = false
-    @State var showNthPrimeAlert = false
-    @State var nthPrime: Int? = nil
-    @State var isLoading = false
     
     var body: some View {
         VStack(spacing: 12) {
@@ -26,25 +23,14 @@ struct CounterView: View {
             
             Button("Is this prime?") {showModal.toggle()  }
             Button("What is the \(state.count) prime?") {
-                isLoading = true
                 WolframAlphaResult.nthPrime(state.count) { value in
-                    self.showNthPrimeAlert.toggle()
-                    self.nthPrime = state.count
-                    self.isLoading = false
+                    print(✅ "\(state.count) Prime is: \(value ?? 0)")
                 }
             }
         }
         .navigationTitle("Counter Demo")
-        .overlay(content: {
-            if isLoading {
-                ProgressView()
-            }
-        })
         .sheet(isPresented: $showModal) {
             IsThisPrimeView(appState: state)
-        }
-        .alert("\(state.count) Prime is", isPresented: $showNthPrimeAlert) {
-            Text("\(state.count) Prime is: \(nthPrime ?? 0)")
         }
         
     }
